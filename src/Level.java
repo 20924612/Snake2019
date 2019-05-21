@@ -8,10 +8,6 @@
  *
  * @author alu20924612v
  */
-public class Config {
-    public static int NUM_ROWS = 30;
-    public static int NUM_COLS = 40;
-    public static int score = 0;
-    public static String level = "medium";
-
+public enum Level {
+    EASY, MEDIUM, HIGH, HARD
 }

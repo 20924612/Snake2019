@@ -8,13 +8,33 @@
  *
  * @author alu20924612v
  */
-public class ScoreBoard extends javax.swing.JPanel {
+public class ScoreBoard extends javax.swing.JLabel {
 
     /**
      * Creates new form ScoreBoard
      */
+    private int score;
+
     public ScoreBoard() {
-        initComponents();
+        super();
+        score = 0;
+        setText("Score: " + score);
+    }
+
+    public void increment(int points) {
+
+        score += points;
+        setText("Score: " + score);
+    }
+
+    public void reset() {
+
+        score = 0;
+        setText("Score: 0");
+    }
+
+    public int getScore() {
+        return score;
     }
 
     /**
@@ -28,8 +48,6 @@ public class ScoreBoard extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setText("Score: ");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -37,7 +55,7 @@ public class ScoreBoard extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(790, Short.MAX_VALUE))
+                .addContainerGap(837, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
